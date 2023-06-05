@@ -1,11 +1,11 @@
 {% macro stored_proc__pi() %}
 
     {% set run_proc_2 %}
-        {{DBT}}.{{PUBLIC}}.stored_proc__pi
+        {{target.database}}.{{target.schema}}.stored_proc__pi
     {% endset %}
     
     {% set stored_proc_ddl_query %}
-        CREATE OR REPLACE PROCEDURE my_procedure()
+        CREATE OR REPLACE PROCEDURE my_procedure_macro()
         RETURNS VARCHAR
         LANGUAGE JAVASCRIPT
         AS

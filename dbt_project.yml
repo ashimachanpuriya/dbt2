@@ -10,6 +10,11 @@ model-paths:
 
 target-path: "target"
    
+vars:
+  target_database: DBT
+  target_schema: Public
+
+
 models:
   shop:
     +materialized: table
