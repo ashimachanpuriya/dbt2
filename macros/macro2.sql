@@ -5,7 +5,7 @@
     {% endset %}
     
     {% set stored_proc_ddl_query %}
-        CREATE OR REPLACE PROCEDURE my_procedure_macro2()
+        CREATE OR REPLACE PROCEDURE my_procedure_macro21()
         RETURNS VARCHAR
         LANGUAGE JAVASCRIPT
         AS
