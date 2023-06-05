@@ -5,7 +5,7 @@
     {% endset %}
     
     {% set stored_proc_ddl_query %}
-        CREATE OR REPLACE PROCEDURE my_procedure_macro()
+        CREATE OR REPLACE PROCEDURE my_procedure_macro2()
         RETURNS VARCHAR
         LANGUAGE JAVASCRIPT
         AS
@@ -28,7 +28,7 @@
             };
 
             bulkData.push(model);
-        }
+        }             
 
         var values = bulkData.map(model => `('${model.id}', '${model['first name']}', '${model['last name']}')`).join(', ');
         var insertStatement = `INSERT INTO DBT.PUBLIC.test1 (id, "first name", "last name") VALUES ${values}`;
